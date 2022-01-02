@@ -1,0 +1,196 @@
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  transition: opacity 1000ms, visibility 1000ms;
+}
+
+.backdrop.is-hidden {
+  .modal {
+    transform: scale(1.5);
+    transition: transform 1000ms;
+  }
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.modal {
+  width: 528px;
+  min-height: 581px;
+  background-color: var(--main-title-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 40px;
+  transform: scale(1);
+  transform: translate(-50%, -50%);
+  transition: transform 1000ms;
+}
+
+.modal-close {
+  width: 30px;
+  height: 30px;
+  background: var(--font-color);
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.modal-close-icon {
+  fill: #000000;
+
+  &:hover {
+    fill: var(--six-color);
+  }
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--second-title-color);
+  margin-bottom: 12px;
+}
+
+.modal-line-box {
+  position: relative;
+}
+
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding-left: 42px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    border-color: var(--six-color);
+  }
+
+  &:focus + .modal-icon {
+    fill: var(--six-color);
+  }
+}
+
+.modal-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input-text {
+  display: flex;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: var(--main-text-color);
+  margin-bottom: 4px;
+}
+
+.modal-form-text {
+  width: 100%;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  padding: 12px 16px 12px 16px;
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.text-area-group {
+  margin-bottom: 20px;
+}
+
+.contract-done {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+}
+
+.done-box {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.done-icon {
+  fill: #ffffff;
+}
+
+.input-done:checked + .contract-done {
+  .done-box {
+    background-color: var(--six-color);
+    border: none;
+  }
+}
+
+.done-button {
+  display: flex;
+  font-size: 16px;
+  line-height: 1.87;
+  background-color: var(--six-color);
+  cursor: pointer;
+  color: var(--main-title-color);
+  border-radius: 4px;
+  min-width: 200px;
+  min-height: 50px;
+  margin: 0 auto;
+  display: block;
+  border-style: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 30px;
+}
+
+.policity {
+  color: var(--second--text-color);
+  margin-left: 5px;
+}
