@@ -1,13 +1,10 @@
 .procces-container {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @include padding(94px, 94px);
 }
 
 .procces-title {
-  font-size: 36px;
-  line-height: 1.16;
+  @include font(700, 36px, 1.16, 0.03em);
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--fourth-text-color);
   margin-bottom: 94px;
 }
@@ -25,16 +22,12 @@
 }
 
 .procces-photo {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
+  @include font(700, 14px, 1.14, 0.03em);
   text-align: center;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   width: 100%;
   height: 70px;
-  display: flex;
-  align-items: center;
+  @extend %aling-list;
   justify-content: center;
   background: rgba(47, 48, 58, 0.8);
   color: #ffffff;

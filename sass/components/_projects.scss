@@ -1,15 +1,12 @@
 .filter {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @include padding(94px, 94px);
 }
 
 .portfolio-item {
   margin-bottom: 30px;
-
   &:not(:nth-child(3n + 1)) {
     margin-left: 30px;
   }
-
   &:nth-last-child(-n + 3) {
     margin-bottom: 0px;
   }
@@ -21,10 +18,7 @@
 }
 
 .portfolio-card {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 20px, 24px, 20px, 24px;
   border: 1px solid #eeeeee;
   border-top: none;
 }
@@ -40,21 +34,15 @@
 }
 
 .portfolio-title {
+  @include font(700, 18px, 2, 0.06em);
   font-family: "Roboto";
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
   color: var(--second-title-color);
   margin: 0;
 }
 
 .portfolio-text {
+  @include font(400, 16px, 1.87, 0.03em);
   font-family: "Roboto";
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.03em;
   color: var(--main-text-color);
   margin: 0;
 }
@@ -68,7 +56,6 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0;
-
   &:hover,
   &:focus {
     background: #ffffff;
@@ -84,11 +71,8 @@
 }
 
 .portfolio-main-text {
+  @include font(400, 18px, 1.56, 0.03em);
   height: 100%;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.56;
-  letter-spacing: 0.03em;
   color: var(--main-title-color);
   background: rgba(33, 150, 243, 0.9);
   position: absolute;

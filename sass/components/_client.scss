@@ -1,14 +1,10 @@
 .client {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @include padding(94px, 94px);
 }
 
 .client-title {
-  font-weight: 700px;
-  font-size: 36px;
-  line-height: 1.16;
+  @include font(700, 36px, 1.16, 00.03em);
   text-align: center;
-  letter-spacing: 0.03em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,9 +23,8 @@
 .client-link {
   width: 170px;
   height: 92px;
-  display: flex;
+  @extend %aling-list;
   justify-content: center;
-  align-items: center;
   fill: #afb1b8;
   border: 1px solid #afb1b8;
   box-sizing: border-box;

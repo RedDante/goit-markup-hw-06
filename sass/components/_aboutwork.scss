@@ -1,6 +1,5 @@
 .description {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @include padding(94px, 94px);
 }
 
 .description-list {
@@ -35,10 +34,7 @@
 }
 
 .description-title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
+  @include font(700, 14px, 1.14, 00.03em);
   text-transform: uppercase;
   margin-bottom: 10px;
   color: var(--fourth-text-color);

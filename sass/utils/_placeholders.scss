@@ -1,0 +1,16 @@
+%aling-list {
+  display: flex;
+  align-items: center;
+}
+
+@mixin font($fw, $fs, $fh, $ls) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $fh;
+  letter-spacing: $ls;
+}
+
+@mixin padding($pt, $pb) {
+  padding-top: $pt;
+  padding-bottom: $pb;
+}
